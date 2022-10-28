@@ -1,0 +1,9 @@
+<div *ngIf="barco">
+    <h2>Detalles De la Fragata: {{barco.nombre | uppercase}} Details</h2>
+    <div><span>Id: </span>{{barco.id}}</div>
+    <div>
+        <label for="barco-nombre">Nombre del Barco: </label>
+        <input id="barco-nombre" [(ngModel)]="barco.nombre" placeholder="nombre">
+        <br>
+        <img src="../assets/Imagenes De Barcos/{{barco.nombre}}.jpg" alt="Imagenes De Barcos">
+    </div>

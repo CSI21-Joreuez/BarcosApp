@@ -1,0 +1,19 @@
+<h2>Mis Barcos</h2>
+<ul >
+  <li *ngFor="let barco of Barcoss">
+    <button [class.selected]="barco === selectedBarco" type="button" (click)="onSelect(barco)">
+     <!-- <span>{{barco.id}} </span> -->
+      <span>{{barco.nombre}}</span>
+    </button>
+  </li>
+</ul>
+<!-- <div *ngIf="selectedBarco">
+  <h2> Detalles De la Fragata: {{selectedBarco.nombre | uppercase}}</h2>
+  <div>Id: {{selectedBarco.id}}</div>
+  <div>
+    <label for="barco-name">Nombre del Barco: </label>
+    <input id="barco-name" [(ngModel)]="selectedBarco.nombre" placeholder="nombre">
+  </div>
+</div> -->
+
+<app-barco-detalles [barco]="selectedBarco"></app-barco-detalles>
